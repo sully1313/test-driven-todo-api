@@ -78,10 +78,10 @@ res.json(foundTodo);
 app.put('/api/todos/:id', function update(req, res) {
    var id = parseInt(req.params.id);
    var updateTask = todos.filter(function(todo){
-     return todo._id == todoId;
+     return todo._id == id;
    })[0];
    updateTask.task = req.body.task;
-   updateTask.description = req.body.updateTask.task;
+   updateTask.description = req.body.description;
    res.json(updateTask);
 });
 
